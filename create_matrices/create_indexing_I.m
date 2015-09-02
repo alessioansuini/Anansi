@@ -43,9 +43,9 @@ for i = 1 : nblocks
         
         % numbers
         
-        I(count, 1) = count;            % progressive number
-        I(count, 2) = i;                % progressive number of block
-        I(count, 3) = j;                % progressive number of neuron
+        I(count, 1) = count;                         % progressive number
+        I(count, 2) = i;                             % progressive number of block
+        I(count, 3) = j;                             % progressive number of neuron
         I(count, 4) = auxdata.NeuronNumber;          % progressive number of neuron
         I(count, 5) = auxdata.Channel;
         

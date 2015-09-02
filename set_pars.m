@@ -25,19 +25,13 @@ function pars = set_pars(varargin)
     block_strings = load(fullfile(dropbox, 'block_strings'));
     pars.block_strings = block_strings.C;
            
-%     % Matrix M
-%     
-%     M = load(fullfile(dropbox, 'M.mat'));
-%     M = M.M;
-%     pars.M = M;
-%     
-%     
-%     % Indexing
-%     
-%     I = load(fullfile(root, 'I_2.0.mat'));
-%     I = I.I;
-%     pars.I = I;
-%     
+    
+    % Indexing
+    
+    I = load(fullfile(dropbox, 'I.mat'));
+    I = I.I;
+    pars.I = I;
+    
     % Areas indexes
     
     Areas = load(fullfile(dropbox, 'Areas.mat'));
@@ -55,7 +49,7 @@ function pars = set_pars(varargin)
     bitcodes = load(fullfile(dropbox, 'bitcodes.mat'));
     bitcodes = bitcodes.bitcodes;
     pars.bitcodes = bitcodes;
-    %pars.organized_bitcodes = get_organized_bitcodes();
+    pars.organized_bitcodes = get_organized_bitcodes();
     
     % table
     
@@ -85,17 +79,17 @@ function pars = set_pars(varargin)
     pars.psths.bin = 1;
     pars.fr.sw = 25;
                            
-    %% for the trials alignment
+    % for the trials alignment
                     
     pars.t_before = 100; 
     pars.t_after = 250;
      
-%     % for the tuning
-%     
-%     pars.tuning.initial_bump = 250;
-%     
-%     pars.tuning.gratings_and_dots.alpha = 1;
-%     pars.tuning.gratings_and_dots.nsamples = 1e2;
+    % for the tuning
+     
+    pars.tuning.initial_bump = 250;
+     
+%   pars.tuning.gratings_and_dots.alpha = 1;
+%   pars.tuning.gratings_and_dots.nsamples = 1e2;
     
      
     % stimuli
@@ -108,10 +102,10 @@ function pars = set_pars(varargin)
     pars.gratsdots.tipo = [1,1,1,1,0,0,0,0,1,1,0,0];
                         
                         
-%     % synchronicity maps
-%     
-%     pars.synchro.minNSpikes = 1e3;
-%     pars.synchro.theta = 0.25;
+    % synchronicity maps
+    
+    pars.synchro.minNSpikes = 1e3;
+    pars.synchro.theta = 0.25;
      
     
     % sorting
