@@ -1,0 +1,55 @@
+function paths = set_paths()
+
+    paths = struct();  
+    
+    % github repository (code)
+    
+    paths.home = fullfile('/Users', 'anansi', 'Repositories', 'Anansi');
+    
+    % dropbox (some data)
+    
+    paths.dropbox = fullfile('/Users', 'anansi', 'Dropbox', 'Anansi');
+    
+    % tables
+    
+    paths.table = fullfile(paths.dropbox,'table.mat');   
+    paths.I = fullfile(paths.dropbox,'Indexing.mat'); 
+                
+    % to raw data (on NAS 1)
+    
+    paths.rawdata = fullfile('/Volumes','spikeSorting', 'Data', 'Federica');
+    
+    % external data I (on VisionLab Server)
+    
+    externaldata = fullfile('/Volumes', 'ansuini', 'Projects', 'Data', 'Anansi');
+    paths.sorted_data = fullfile(externaldata, 'spikeStructures');
+    paths.neurons_data = fullfile(externaldata, 'neuronsStructures');
+    paths.rfquality = fullfile(externaldata, 'rfquality');
+    paths.receptive_fields = fullfile(externaldata, 'receptive_fields');
+    paths.spiketimes = fullfile(externaldata, 'spiketimes');
+    paths.waveforms = fullfile(externaldata, 'waveforms');
+    paths.snr = fullfile(externaldata, 'snr');
+          
+    % external data II (on VisionLab Server)
+    
+    paths.alignedTrials = fullfile(externaldata, 'alignedTrials');
+    paths.psths = fullfile(externaldata, 'psths');
+    paths.firingRates_smooth = fullfile(externaldata, 'firingRates_smooth');
+    paths.firingRates_convolve = fullfile(externaldata, 'firingRates_convolve');
+    paths.tuning_gratings_dots = fullfile(externaldata, 'tuning_gratings_dots');
+    paths.tuning_gratings_dots_default = fullfile(externaldata, 'tuning_gratings_dots_default');
+%     
+%     
+%     % to results
+%     
+%     paths.results = fullfile(paths.home, 'results');
+%      
+%     % to Tanks
+%     
+%     paths.Tanks = fullfile('/Volumes', 'chronic_inv_rec', 'Tanks');
+%     
+%     % data collected while exploring neurons
+%     
+%     paths.exploration_data = fullfile(paths.home, 'gui_multiple_anansi', 'Exploration_results');
+    
+end
