@@ -1,5 +1,14 @@
 %% create indexing matrix
 
+
+% creates matrix of indexes to identify neurons uniquely
+% with a numerical code
+% 
+% other info
+% -- number of block
+% -- cluster inside the block
+% -- from aux 
+
 ccc
 
 pars = set_pars();

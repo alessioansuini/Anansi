@@ -1,5 +1,19 @@
 %% create indexing matrix
 
+
+% creates matrix of indexes to identify neurons uniquely
+% with a numerical code
+% 
+% other info
+% -- number of block
+% -- cluster inside the block
+% -- from auxdata neuron number (check)
+% -- from auxdata channel number
+% -- from auxdata area
+% -- from auxdata and rfdata RF info 
+% -- from pars.backgrounds backgrounds
+% -- from SPIKES number of spikes
+
 ccc
 
 pars = set_pars();
