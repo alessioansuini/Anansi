@@ -25,7 +25,7 @@ function paths = set_paths()
     
     paths.sorted_data = fullfile(externaldata, 'spikeStructures');
     paths.neurons_data = fullfile(externaldata, 'neuronsStructures'); 
-    paths.rfquality = fullfile(externaldata, 'rfquality');
+    
     paths.receptive_fields = fullfile(externaldata, 'receptive_fields');
     paths.spiketimes = fullfile(externaldata, 'spiketimes');
     paths.waveforms = fullfile(externaldata, 'waveforms');
@@ -36,6 +36,7 @@ function paths = set_paths()
     
     % external data II (on Dropbox)
     
+    paths.rfquality = fullfile(dropboxdata, 'rfquality');
     paths.alignedTrials = fullfile(dropboxdata, 'alignedTrials');
     %paths.psths = fullfile(dropboxdata, 'psths');
     %paths.firingRates = fullfile(dropboxdata, 'firingRates');
