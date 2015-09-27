@@ -2,7 +2,7 @@ function f = fit_backgrounds(backgrounds, show)
 
 f = struct();
 
-[lambda, lambdaci] = poissfit(backgrounds);
+[lambda, ~] = poissfit(backgrounds);
 bins = 0:1:50;
 Y = poisspdf(bins, lambda);
 h = histc(backgrounds, bins);
