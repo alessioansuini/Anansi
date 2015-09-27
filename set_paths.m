@@ -31,12 +31,15 @@ function paths = set_paths()
     paths.waveforms = fullfile(externaldata, 'waveforms');
     paths.snr = fullfile(externaldata, 'snr');
           
-    % external data II (on VisionLab Server, data subject to changes)
     
-    paths.alignedTrials = fullfile(externaldata, 'alignedTrials');
-    paths.psths = fullfile(externaldata, 'psths');
-    paths.firingRates = fullfile(externaldata, 'firingRates');
-    paths.tuning =  fullfile(externaldata, 'tuning');
+    dropboxdata = fullfile('/Users','anansi', 'Dropbox', 'Anansi', 'data');
+    
+    % external data II (on Dropbox)
+    
+    paths.alignedTrials = fullfile(dropboxdata, 'alignedTrials');
+    %paths.psths = fullfile(dropboxdata, 'psths');
+    %paths.firingRates = fullfile(dropboxdata, 'firingRates');
+    %paths.tuning =  fullfile(dropboxdata, 'tuning');
      
     % to results
      

@@ -1,8 +1,10 @@
 function [bkg, bkg_condition] = compute_backgrounds(pars, i, tin)
 
-% From a neuron spike times returns the raw firing rate 
-% (obtained by a spike count), averaged over all trials 
-% in a time window of length tin before stimulus onset
+% From a neuron  returns the raw firing rate 
+% (obtained by a spike count), averaged over all trials and 
+% all the bitcodes, anor each bitcode
+% in a time window of length
+% tin before stimulus onset
 
 n = pars.general.nbitcodes;
 
