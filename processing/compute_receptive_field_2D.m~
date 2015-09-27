@@ -96,8 +96,15 @@ catch err
 end  % end try/catch
 
 
+%resizedRF = imresize(RF, [numel(nsx), numel(nsy)]);
+resizedRF = zeros(numel(nsy), numel(nsx));
+for i = 1:6
+    for j = 1:11
+        pivot = RF(i)
+    end
+end
 
-resizedRF = imresize(RF, [numel(nsx), numel(nsy)]);
+
 
 if SHOW
     figure
@@ -109,6 +116,7 @@ if SHOW
     set(gca, 'XLim', [1, numel(nsy)])
     set(gca, 'YLim', [1, numel(nsx)])
     set(gca, 'YDir', 'normal' )
+    colorbar
     
     subplot(2,2,2)
     hold on
@@ -116,11 +124,11 @@ if SHOW
     contour(f.zfit)
     set(gca, 'XLim', [1, numel(nsy)])
     set(gca, 'YLim', [1, numel(nsx)])
-    set(gca, 'YDir', 'normal' )
+    set(gca, 'YDir', 'normal' )    
     
     colormap(bone)
     title(['rsq = ', num2str(f.gof.rsquare), 'correlation = ', num2str(f.fitresult.rho) ])
-    
+    colorbar
     
     subplot(2,2,3)
     surf(RF)

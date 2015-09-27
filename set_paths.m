@@ -2,13 +2,14 @@ function paths = set_paths()
 
     paths = struct();  
     
+    userdir = getuserdir;
     % github repository (code)
     
-    paths.home = fullfile('/Users', 'anansi', 'Repositories', 'Anansi');
+    paths.home = fullfile(userdir, 'Repositories', 'Anansi');
     
     % dropbox (some data)
     
-    paths.dropbox = fullfile('/Users', 'anansi', 'Dropbox', 'Anansi');
+    paths.dropbox = fullfile(userdir, 'Dropbox', 'Anansi');
     
     % tables
     
@@ -32,7 +33,7 @@ function paths = set_paths()
     paths.snr = fullfile(externaldata, 'snr');
           
     
-    dropboxdata = fullfile('/Users','anansi', 'Dropbox', 'Anansi', 'data');
+    dropboxdata = fullfile(paths.dropbox, 'data');
     
     % external data II (on Dropbox)
     

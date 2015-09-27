@@ -95,9 +95,16 @@ catch err
 
 end  % end try/catch
 
+%%
+resizedRF = zeros(numel(nsx), numel(nsy));
+for i = 1:6
+    for j = 1:11
+        pivot = RF(i,j);
+        resizedRF((i-1)*10 + 1:i*10, (j-1)*10 + 1: j*10) = repmat(pivot, 10, 10);
+    end
+end
+%%
 
-
-resizedRF = imresize(RF, [numel(nsx), numel(nsy)]);
 
 if SHOW
     figure
@@ -106,6 +113,7 @@ if SHOW
     imagesc(resizedRF)
     contour(f.zfit)
     colormap(bone)
+    plot(f.fitresult.x0*10, f.fitresult.y0*10, '.r', 'MarkerSize', 10 )
     set(gca, 'XLim', [1, numel(nsy)])
     set(gca, 'YLim', [1, numel(nsx)])
     set(gca, 'YDir', 'normal' )
